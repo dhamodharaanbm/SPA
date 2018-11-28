@@ -1,0 +1,46 @@
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>Fund By Card</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding text-center>
+  <form>
+    <ion-grid>
+      <ion-row align-items-end>
+        <ion-col text-left no-padding > <p>CARD NUMBER*</p> </ion-col>
+        <ion-col col-9 no-padding>
+          <ion-item>
+            <input type="tel" autocomplete="off" id="hide-text" [(ngModel)]="cardNumber" name="cardNumber"/>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-end>
+        <ion-col text-left no-padding> <p>EXP DATE*</p> </ion-col>
+        <ion-col col-9 no-padding>
+          <ion-item> <input type="month" style="width: 100%;" displayFormat="mm/YY" [(ngModel)]="expDate" name="expDate" /> </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-end>
+        <ion-col text-left no-padding> <p>CVV*</p> </ion-col>
+        <ion-col col-9 no-padding>
+          <ion-item>
+            <input type="tel" autocomplete="off" id="hide-text" [(ngModel)]="cvv" name="cvv"/>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-end>
+        <ion-col text-left no-padding> <p>AMOUNT*</p> </ion-col>
+        <ion-col col-9 no-padding>
+          <ion-item class="card-no">
+            <input name="nickname" type="number" autocomplete="off" [(ngModel)]="amount" name="amount"/>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col><button text-uppercase block ion-button color="light" navPop>Cancel</button></ion-col>
+          <ion-col><button text-uppercase block ion-button (click)="cardSubmit()">Submit</button></ion-col>
+        </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
